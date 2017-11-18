@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/date_picker_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/dialog_date_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/ok"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:id="@+id/dialog_date_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/cancel"
+            android:layout_toLeftOf="@id/dialog_date_ok_button"
+            android:layout_toStartOf="@id/dialog_date_ok_button"
+            android:padding="12dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </RelativeLayout>
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/date_picker_button_bar"
+        android:calendarViewShown="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/date_picker_title"
+        android:layout_alignParentTop="true"
+        android:textSize="20sp"
+        style="?android:listSeparatorTextViewStyle"/>
+</RelativeLayout>
